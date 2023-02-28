@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title></title>
+</head>
+<body>
+	<a href="http://localhost:8080/testaWeb">Página principal</a><br>
+	<a href="http://localhost:8080/testaWeb/executa_servlet">Hora e Data Atual</a>
+		<h1>Cadastro de Filme</h1>
+		
+		<form action="grava_filme">
+			Nome:
+			<input type = "text" name = "nomeDoFilme"/>
+			Valor:
+			<input type = "text" name = "valorDoFilme"/>
+			Genero:
+			<input type = "text" name = "generoDoFilme"><br>
+				<br>Disponivel:<br>
+				<input type = "radio" name = "disponivel" value = "Sim" checked>Sim
+				<input type = "radio" name = "disponivel" value = "Sim">Não<br>
+			<input type = "submit" value = "Salvar Dados"/>		
+		</form>
+</body>
+</html>

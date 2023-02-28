@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>testaWeb</display-name>
+  
+  	<!-- Primeiro Servlet: -->
+  	<servlet>
+  		<servlet-name>primeiro</servlet-name>
+  		<servlet-class>servlet.ExibeHora</servlet-class>
+  	</servlet>
+  	
+  	<servlet-mapping>
+  		<servlet-name>primeiro</servlet-name>
+  		<url-pattern>/executa_servlet</url-pattern>
+  	</servlet-mapping>
+  	
+  	<!-- Segundo Servlet: -->
+  	<servlet>
+  		<servlet-name>segundo</servlet-name>
+  		<servlet-class>servlet.GravarFilme</servlet-class>
+  	</servlet>
+  	
+  	<servlet-mapping>
+  		<servlet-name>segundo</servlet-name>
+  		<url-pattern>/grava_filme</url-pattern>
+  	</servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
