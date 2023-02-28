@@ -8,13 +8,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import model.Filme;
-import util.ConnectionFactory;
 
 public class FilmeDao {
 	private final Connection conn;
 
-	public FilmeDao(ConnectionFactory conn) {
-		this.conn = (Connection) conn;
+	public FilmeDao(Connection conn) {
+		this.conn = conn;
 	}
 
 	// INSERIR
