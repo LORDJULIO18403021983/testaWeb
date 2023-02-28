@@ -37,7 +37,7 @@ public class GravarFilme extends HttpServlet {
 		gravador.println("</html>");
 
 		Connection conn = ConnectionFactory.getConnection();
-		FilmeDao filmeDao = new FilmeDao((ConnectionFactory) conn);
+		FilmeDao filmeDao = new FilmeDao(conn);
 		Filme filme = new Filme();
 
 		if (request.getParameter("nomeDoFilme").isEmpty()) {

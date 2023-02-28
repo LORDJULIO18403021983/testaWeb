@@ -23,6 +23,17 @@
   		<servlet-name>segundo</servlet-name>
   		<url-pattern>/grava_filme</url-pattern>
   	</servlet-mapping>
+  	
+  	<!-- Terceiro Servlet: -->
+  	<servlet>
+  		<servlet-name>terceiro</servlet-name>
+  		<servlet-class>servlet.ListarFilme</servlet-class>
+  	</servlet>
+  	
+  	<servlet-mapping>
+  		<servlet-name>terceiro</servlet-name>
+  		<url-pattern>/lista_filme</url-pattern>
+  	</servlet-mapping>
   
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
