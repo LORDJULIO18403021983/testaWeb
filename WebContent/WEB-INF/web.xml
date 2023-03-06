@@ -34,6 +34,28 @@
   		<servlet-name>terceiro</servlet-name>
   		<url-pattern>/lista_filme</url-pattern>
   	</servlet-mapping>
+  	
+  	<!-- Quarto Servlet: -->
+  	<servlet>
+  		<servlet-name>quarto</servlet-name>
+  		<servlet-class>servlet.GravarProduto</servlet-class>
+  	</servlet>
+  	
+  	<servlet-mapping>
+  		<servlet-name>quarto</servlet-name>
+  		<url-pattern>/grava_produto</url-pattern>
+  	</servlet-mapping>
+  	
+  	<!-- Quinto Servlet: -->
+  	<servlet>
+  		<servlet-name>quinto</servlet-name>
+  		<servlet-class>servlet.ListarProduto</servlet-class>
+  	</servlet>
+  	
+  	<servlet-mapping>
+  		<servlet-name>quinto</servlet-name>
+  		<url-pattern>/lista_produto</url-pattern>
+  	</servlet-mapping>
   
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>

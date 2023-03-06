@@ -12,21 +12,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.FilmeDao;
-import model.Filme;
+import dao.ProdutoDao;
+import model.Produto;
 import util.ConnectionFactory;
 
-public class ListarFilme extends HttpServlet {
+public class ListarProduto extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		Connection conn = ConnectionFactory.getConnection();
-		FilmeDao filmeDao = new FilmeDao(conn);
-		List<Filme> filmes = new ArrayList<>();
+		ProdutoDao produtoDao = new ProdutoDao(conn);
+		List<Produto> produtos = new ArrayList<Produto>();
 
 		try {
-			filmes = filmeDao.buscarTodosDao();
+			produtos = produtoDao.buscarTodosDao();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -38,24 +38,30 @@ public class ListarFilme extends HttpServlet {
 		gravador.println("<style>");
 		gravador.println("table, th, td { border:1px solid black; }");
 		gravador.println("</style>");
-		gravador.println("<head><title>..::Lista de Filmes::..</title></head>");
+		gravador.println("<head><title>Lista de Produtos</title></head>");
 
 		gravador.println("<body>");
-		gravador.println("<h1> Lista de filmes</h1><br>");
+		gravador.println("<h1> ..::Lista de produtos::..</h1><br>");
 		gravador.println("<table style = 'width:100%' >");
 		gravador.println("<tr>");
-		gravador.println("<th>Nome do Filme</th>");
-		gravador.println("<th>Valor do Filme</th>");
-		gravador.println("<th>Genero do Filme</th>");
-		gravador.println("<th>Disponivel</th>");
+		gravador.println("<th>Descri��o</th>");
+		gravador.println("<th>Valor do Custo</th>");
+		gravador.println("<th>Valor de Venda</th>");
+		gravador.println("<th>Garantia</th>");
+		gravador.println("<th>Estoque</th>");
+		gravador.println("<th>Codigo de Barras</th>");
+		gravador.println("<th>Nome do Vendedor</th>");
 		gravador.println("</tr>");
 
-		for (Filme f : filmes) {
+		for (Produto p : produtos) {
 			gravador.println("<tr>");
-			gravador.println("<td>" + f.getNome() + "</td>");
-			gravador.println("<td>" + f.getValor() + " </td>");
-			gravador.println("<td>" + f.getGenero() + "</td>");
-			gravador.println("<td>" + f.getDisponivel() + "</td>");
+			gravador.println("<td>" + p.getDescricao() + "</td>");
+			gravador.println("<td>" + p.getValorCusto() + " </td>");
+			gravador.println("<td>" + p.getValorVenda() + " </td>");
+			gravador.println("<td>" + p.getGarantia() + "</td>");
+			gravador.println("<td>" + p.getEstoque() + "</td>");
+			gravador.println("<td>" + p.getCodigoDeBarras() + "</td>");
+			gravador.println("<td>" + p.getNomeDoVendedor() + "</td>");
 			gravador.println("</tr>");
 		}
 

@@ -35,16 +35,16 @@ public class FilmeDao {
 
 		String sql = "select * from filme ";
 		PreparedStatement pstm = conn.prepareStatement(sql);
-		ResultSet cursor = pstm.executeQuery();
+		ResultSet cursor2 = pstm.executeQuery();
 
 		List<Filme> filmes = new ArrayList<Filme>();
 
-		while (cursor.next()) {
+		while (cursor2.next()) {
 			Filme filme = new Filme();
-			filme.setNome(cursor.getString("nome"));
-			filme.setValor(cursor.getDouble("valor"));
-			filme.setGenero(cursor.getString("Genero"));
-			filme.setDisponivel(cursor.getString("Disponivel"));
+			filme.setNome(cursor2.getString("nome"));
+			filme.setValor(cursor2.getDouble("valor"));
+			filme.setGenero(cursor2.getString("genero"));
+			filme.setDisponivel(cursor2.getString("disponivel"));
 			filmes.add(filme);
 		}
 		return filmes;

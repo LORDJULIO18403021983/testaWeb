@@ -13,8 +13,6 @@ public class ExibeHora extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		// super.doGet(request, response);
 
 		// Verifica a data do servidor
 		Date hoje = new Date();
