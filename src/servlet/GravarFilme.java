@@ -27,7 +27,7 @@ public class GravarFilme extends HttpServlet {
 		// Captura a referência ao objeto PrintWriter que existe em response.
 		PrintWriter gravador = response.getWriter();
 
-		// Escreve o c�digo HTML.
+		// Escreve o código HTML.
 		gravador.println("<html>");
 		gravador.println("<head><title>Filme Gravado</title></head>");
 		gravador.println("<body>");
