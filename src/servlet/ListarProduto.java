@@ -44,7 +44,7 @@ public class ListarProduto extends HttpServlet {
 		gravador.println("<h1> ..::Lista de produtos::..</h1><br>");
 		gravador.println("<table style = 'width:100%' >");
 		gravador.println("<tr>");
-		gravador.println("<th>Descriï¿½ï¿½o</th>");
+		gravador.println("<th>Descrição</th>");
 		gravador.println("<th>Valor do Custo</th>");
 		gravador.println("<th>Valor de Venda</th>");
 		gravador.println("<th>Garantia</th>");

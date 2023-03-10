@@ -56,6 +56,17 @@
   		<servlet-name>quinto</servlet-name>
   		<url-pattern>/lista_produto</url-pattern>
   	</servlet-mapping>
+
+  	<!-- Sexto Servlet: -->
+  	<servlet>
+  		<servlet-name>tabuada</servlet-name>
+  		<servlet-class>servlet.Tabuada</servlet-class>
+  	</servlet>
+
+  	<servlet-mapping>
+  		<servlet-name>tabuada</servlet-name>
+  		<url-pattern>/tabuada</url-pattern>
+  	</servlet-mapping>
   
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
