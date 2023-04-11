@@ -5,6 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Exibe Hora pelo JSP</title>
+<link rel="stylesheet" href="CSS/estilo.css">
 </head>
 <body>
 	<a href="index.html">Página Principal</a>

@@ -55,9 +55,9 @@ public class GravarFilme extends HttpServlet {
 			} else {
 				filme.setGenero(request.getParameter("generoDoFilme"));
 			}
-			if (request.getParameter("disponivel").isEmpty()) {
+			if (request.getParameter("status").isEmpty()) {
 			} else {
-				filme.setDisponivel(request.getParameter("disponivel"));
+				filme.setStatus(Integer.parseInt(request.getParameter("status")));
 			}
 			try {
 				filmeDao.inserir(filme);

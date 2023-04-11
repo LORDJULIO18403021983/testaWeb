@@ -38,7 +38,8 @@ public class ListarProduto extends HttpServlet {
 		gravador.println("<style>");
 		gravador.println("table, th, td { border:1px solid black; }");
 		gravador.println("</style>");
-		gravador.println("<head><title>Lista de Produtos</title></head>");
+		gravador.println("<head><title>Lista de Produtos</title><head>");
+		gravador.println("<head><link rel=\"stylesheet\" href=\"CSS/estilo.css\"></head>");
 
 		gravador.println("<body>");
 		gravador.println("<h1> ..::Lista de produtos::..</h1><br>");

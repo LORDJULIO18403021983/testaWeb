@@ -1,0 +1,10 @@
+@charset "ISO-8859-1";
+
+body {
+	background: yellow;
+}
+
+h1 {
+	color: blue;
+	font-size: 40px;
+}

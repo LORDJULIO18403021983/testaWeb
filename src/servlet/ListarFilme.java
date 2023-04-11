@@ -23,7 +23,7 @@ public class ListarFilme extends HttpServlet {
 
 		Connection conn = ConnectionFactory.getConnection();
 		FilmeDao filmeDao = new FilmeDao(conn);
-		List<Filme> filmes = new ArrayList<>();
+		List<Filme> filmes = new ArrayList<Filme>();
 
 		try {
 			filmes = filmeDao.buscarTodosDao();
@@ -38,7 +38,8 @@ public class ListarFilme extends HttpServlet {
 		gravador.println("<style>");
 		gravador.println("table, th, td { border:1px solid black; }");
 		gravador.println("</style>");
-		gravador.println("<head><title>..::Lista de Filmes::..</title></head>");
+		gravador.println("<head><title>..::Lista de Filmes::..</title><head>");
+		gravador.println("<head><link rel=\"stylesheet\" href=\"CSS/estilo.css\"></head>");
 
 		gravador.println("<body>");
 		gravador.println("<h1> Lista de filmes</h1><br>");
@@ -55,7 +56,7 @@ public class ListarFilme extends HttpServlet {
 			gravador.println("<td>" + f.getNome() + "</td>");
 			gravador.println("<td>" + f.getValor() + " </td>");
 			gravador.println("<td>" + f.getGenero() + "</td>");
-			gravador.println("<td>" + f.getDisponivel() + "</td>");
+			gravador.println("<td>" + f.getStatus() + "</td>");
 			gravador.println("</tr>");
 		}
 

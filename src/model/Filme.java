@@ -4,7 +4,7 @@ public class Filme {
 	private String nome;
 	private Double valor;
 	private String genero;
-	private String disponivel;
+	private Integer status;
 
 	public String getNome() {
 		return nome;
@@ -30,11 +30,11 @@ public class Filme {
 		this.genero = genero;
 	}
 
-	public String getDisponivel() {
-		return disponivel;
+	public Integer getStatus() {
+		return status;
 	}
 
-	public void setDisponivel(String disponivel) {
-		this.disponivel = disponivel;
+	public void setStatus(Integer status) {
+		this.status = status;
 	}
 }

@@ -25,7 +25,7 @@ public class FilmeDao {
 		pstm.setString(1, filme.getNome());
 		pstm.setDouble(2, filme.getValor());
 		pstm.setString(3, filme.getGenero());
-		pstm.setString(4, filme.getDisponivel());
+		pstm.setInt(4, filme.getStatus());
 
 		pstm.execute();
 	}
@@ -44,7 +44,7 @@ public class FilmeDao {
 			filme.setNome(cursor2.getString("nome"));
 			filme.setValor(cursor2.getDouble("valor"));
 			filme.setGenero(cursor2.getString("genero"));
-			filme.setDisponivel(cursor2.getString("disponivel"));
+			filme.setStatus(cursor2.getInt("status"));
 			filmes.add(filme);
 		}
 		return filmes;
